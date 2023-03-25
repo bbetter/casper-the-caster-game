@@ -1,0 +1,81 @@
+[gd_scene load_steps=9 format=3 uid="uid://b6c0sr4yx3tkl"]
+
+[ext_resource type="Script" path="res://scripts/Enemy.gd" id="2"]
+[ext_resource type="Material" uid="uid://v8mn7rc1mtk" path="res://shaders/enemy_highlight_material.tres" id="3"]
+[ext_resource type="Texture2D" uid="uid://cekyam1olt1j4" path="res://assets/zombie.png" id="3_lv1l1"]
+
+[sub_resource type="Animation" id="3"]
+resource_name = "Damaged"
+length = 0.75
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_param/flash_modifier")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.15, 0.2, 0.35, 0.45, 0.6, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.115, 0.23, 0.333, 0.632, 0.287, 0.069, 0.0]
+}
+
+[sub_resource type="Animation" id="4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_param/flash_modifier")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5vob1"]
+_data = {
+"Damaged": SubResource("3"),
+"RESET": SubResource("4")
+}
+
+[sub_resource type="CapsuleShape2D" id="1"]
+radius = 12.0
+
+[sub_resource type="GDScript" id="2"]
+script/source = "extends CollisionShape2D
+
+
+func hit():
+	get_parent().queue_free()
+
+"
+
+[node name="Enemy" type="CharacterBody2D"]
+rotation = 1.5708
+collision_layer = 4
+collision_mask = 7
+script = ExtResource("2")
+speed = 95
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite2D")
+libraries = {
+"": SubResource("AnimationLibrary_5vob1")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("1")
+script = SubResource("2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+material = ExtResource("3")
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("3_lv1l1")
+
+[node name="NavAgent" type="NavigationAgent2D" parent="."]
+avoidance_enabled = true

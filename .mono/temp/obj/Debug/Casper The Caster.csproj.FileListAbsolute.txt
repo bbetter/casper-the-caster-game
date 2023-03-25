@@ -1,0 +1,9 @@
+C:\Users\andri\Documents\Casper The Caster\.mono\temp\bin\Debug\Casper The Caster.dll
+C:\Users\andri\Documents\Casper The Caster\.mono\temp\bin\Debug\Casper The Caster.pdb
+C:\Users\andri\Documents\Casper The Caster\.mono\temp\obj\Debug\Casper The Caster.csproj.AssemblyReference.cache
+C:\Users\andri\Documents\Casper The Caster\.mono\temp\obj\Debug\Casper The Caster.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andri\Documents\Casper The Caster\.mono\temp\obj\Debug\Casper The Caster.AssemblyInfoInputs.cache
+C:\Users\andri\Documents\Casper The Caster\.mono\temp\obj\Debug\Casper The Caster.AssemblyInfo.cs
+C:\Users\andri\Documents\Casper The Caster\.mono\temp\obj\Debug\Casper The Caster.csproj.CoreCompileInputs.cache
+C:\Users\andri\Documents\Casper The Caster\.mono\temp\obj\Debug\Casper The Caster.dll
+C:\Users\andri\Documents\Casper The Caster\.mono\temp\obj\Debug\Casper The Caster.pdb
