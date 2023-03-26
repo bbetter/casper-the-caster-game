@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://scripts/Level.gd" id="1_gvtuu"]
 [ext_resource type="PackedScene" uid="uid://d2m314gft2fej" path="res://scenes/HUD.tscn" id="2_cpvle"]
 [ext_resource type="PackedScene" uid="uid://vcf08tyq0qqn" path="res://scenes/Player.tscn" id="2_nss4p"]
-[ext_resource type="Texture2D" uid="uid://b0q0x1iowirwx" path="res://assets/floor_tiles.jpg" id="4_nki8u"]
-[ext_resource type="Texture2D" uid="uid://bjtw45fvq7lut" path="res://assets/wall-tiles-autotile.png" id="4_oyana"]
+[ext_resource type="Texture2D" uid="uid://cliity3oprar5" path="res://assets/floor_tiles.jpg" id="4_nki8u"]
+[ext_resource type="Texture2D" uid="uid://bukskdabxb36x" path="res://assets/wall-tiles-autotile.png" id="4_oyana"]
 [ext_resource type="PackedScene" uid="uid://cwfyfbrdwuehb" path="res://scenes/Spawner.tscn" id="6_ojyir"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b64gq"]

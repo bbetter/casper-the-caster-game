@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2m314gft2fej"]
+[gd_scene load_steps=5 format=3 uid="uid://d2m314gft2fej"]
 
 [ext_resource type="Script" path="res://scripts/HUD.gd" id="1"]
+[ext_resource type="Material" uid="uid://cvyu2q5dv7unb" path="res://shaders/fill_in_color.tres" id="2_eow7r"]
+[ext_resource type="Texture2D" uid="uid://dcvn3qyucjjmb" path="res://assets/ghost_health.png" id="2_tcwk2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mlv6t"]
+line_spacing = 8.0
+font_size = 72
+outline_size = 8
+outline_color = Color(1, 0, 0, 1)
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1")
@@ -8,16 +16,21 @@ killed_count = 1
 hp = 5
 
 [node name="KilledLabel" type="Label" parent="."]
-offset_left = 2.0
-offset_top = 584.0
-offset_right = 63.0
-offset_bottom = 598.0
-text = "KILLED: 1"
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_right = 5.0
+offset_bottom = 26.0
+grow_horizontal = 2
+text = "0"
+label_settings = SubResource("LabelSettings_mlv6t")
 
-[node name="HpLabel" type="Label" parent="."]
-anchors_preset = -1
-anchor_top = 0.945
-anchor_bottom = 1.0
-offset_left = 3.0
-offset_right = 37.0
-text = "HP: 5"
+[node name="HpRect" type="TextureRect" parent="."]
+material = ExtResource("2_eow7r")
+offset_left = 11.0
+offset_top = 582.0
+offset_right = 68.0
+offset_bottom = 636.0
+texture = ExtResource("2_tcwk2")
+expand_mode = 1

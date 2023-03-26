@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://b45dab37jbr0o"]
 
 [ext_resource type="Script" path="res://scripts/Spell.gd" id="2"]
-[ext_resource type="Texture2D" uid="uid://dd7jkgwfvbjj3" path="res://assets/fire_balls.png" id="2_3n8jj"]
-[ext_resource type="Texture2D" uid="uid://dn22fa1rbrvs3" path="res://assets/light.png" id="3_lk11f"]
+[ext_resource type="Texture2D" uid="uid://boa470s56ejk5" path="res://assets/fire_balls.png" id="2_3n8jj"]
+[ext_resource type="Texture2D" uid="uid://bra5ipeou1l3w" path="res://assets/light.png" id="3_lk11f"]
 
 [sub_resource type="CapsuleShape2D" id="1"]
 radius = 8.0
